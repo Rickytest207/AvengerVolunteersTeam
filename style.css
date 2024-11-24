@@ -194,27 +194,17 @@ ul {
 }
 
 /* Fullscreen Videos for Explanation Session */
+/* Fullscreen Videos for Explanation Session */
 .volunteer-section .video-wrapper {
     position: relative;
     width: 100%;
-    height: 56.25vw; /* Keep the video aspect ratio of 16:9 */
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (height / width * 100) */
     margin: 0 auto;
     overflow: hidden;
-    border-radius: 10px;
-    background: none; /* Removed the background shader */
-    /* Remove box-shadow if present */
-    box-shadow: none;
-}
-
-.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    max-width: 100%;
-    background: none; /* Removed the background shader */
-    border-radius: 10px;
-    margin: 0 auto;
-    box-shadow: none; /* No shadow effect */
+    background: none; /* Remove any background shader */
+    border-radius: 0; /* Remove border-radius if not needed */
+    box-shadow: none; /* No shadow */
 }
 
 .video-wrapper iframe {
@@ -224,6 +214,22 @@ ul {
     width: 100%;
     height: 100%;
     border: none;
+}
+
+/* For smaller screens like mobile devices */
+@media (max-width: 768px) {
+    .volunteer-section .video-wrapper {
+        padding-bottom: 56.25%; /* Ensure 16:9 ratio */
+        height: auto; /* Allow the video to scale properly */
+    }
+}
+
+/* For large screens (PCs) */
+@media (min-width: 1024px) {
+    .volunteer-section .video-wrapper {
+        height: 100vh; /* Full viewport height on larger screens */
+        padding-bottom: 56.25%; /* Keep 16:9 aspect ratio */
+    }
 }
 /* Footer Section Styling */
 .footer-section {
