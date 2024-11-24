@@ -132,7 +132,8 @@ ul {
         font-size: 3rem;
     }
 }
-/* General Styles */
+
+/* Header Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -266,40 +267,25 @@ footer {
 }
 
 /* Fullscreen Videos for Explanation Session */
-.volunteer-section .video-wrapper {
-    position: relative;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    margin: 0 auto; /* Center-aligns the video container */
-}
 .video-wrapper {
-
-    position: relative;
-
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background: #000;
-    border-radius: 10px;
-    margin: 0 auto;
+  position: relative;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  margin: 0 auto; /* Center-aligns the video container */
+  border-radius: 10px;
+  overflow: hidden; /* Ensures the content fits inside the container */
+  max-width: 100%; /* Prevents overflow */
 }
 
 .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* Remove border */
 }
-.volunteer-section .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Spans the full width */
-    height: 100%; /* Spans the full height */
-    border: none; /* Remove border */
-}
+
 /* Footer Section Styling */
 .footer-section {
   text-align: center;
@@ -376,4 +362,4 @@ footer {
   .footer-buttons {
     flex-direction: column; /* Stack buttons vertically */
   }
-} Please fix this, the videos are full screen as I wish, but I don't want it to stack over the words
+}
