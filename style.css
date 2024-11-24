@@ -267,37 +267,29 @@ footer {
 }
 
 /* Fullscreen Videos for Explanation Session */
-.video-wrapper {
-  position: relative;
-  width: 100vw; /* Full viewport width */
-  height: 100vh; /* Full viewport height */
-  margin: 0 auto; /* Center-aligns the video container */
-  background: transparence;
-  border-radius: 10px;
-  overflow: hidden; /* Ensures the content fits inside the container */
-  max-width: 100%; /* Prevents overflow */
-}
 
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none; /* Remove border */
-}
-
-/* Footer Section Styling */
-.footer-section {
-  text-align: center;
-  padding: 50px 20px;
-  background: linear-gradient(120deg, #004d40, #00695c); /* Darker gradient */
-  color: white;
-}
 
 .footer-content h2 {
   font-size: 2.2rem;
-  margin-bottom: 15px;
+  margin.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* This maintains the 16:9 aspect ratio for the video */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 0 auto;
+    background: none;  /* Removes the black background */
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures the iframe takes full width of the wrapper */
+    height: 100%; /* Ensures the iframe takes full height of the wrapper */
+    border: none;  /* Removes any border around the iframe */
+}-bottom: 15px;
 }
 
 .footer-content p {
