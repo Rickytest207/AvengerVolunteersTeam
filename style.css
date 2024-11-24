@@ -1,28 +1,4 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
-}
 
-.content {
-    display: none;
-}
-
-.landscape-message {
-    font-size: 2rem;
-    color: #00796b;
-    background-color: #e0f7fa;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-}
 /* General Styles */
 * {
     margin: 0;
