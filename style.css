@@ -200,8 +200,10 @@ ul {
     height: 56.25vw; /* Keep the video aspect ratio of 16:9 */
     margin: 0 auto;
     overflow: hidden;
-    background: #000;
     border-radius: 10px;
+    background: none; /* Removed the background shader */
+    /* Remove box-shadow if present */
+    box-shadow: none;
 }
 
 .video-wrapper {
@@ -209,9 +211,10 @@ ul {
     padding-bottom: 56.25%;
     height: 0;
     max-width: 100%;
-    background: #000;
+    background: none; /* Removed the background shader */
     border-radius: 10px;
     margin: 0 auto;
+    box-shadow: none; /* No shadow effect */
 }
 
 .video-wrapper iframe {
@@ -222,7 +225,6 @@ ul {
     height: 100%;
     border: none;
 }
-
 /* Footer Section Styling */
 .footer-section {
   text-align: center;
