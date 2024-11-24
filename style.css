@@ -6,25 +6,14 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f9;
-}
-
-/* Typography */
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
     color: #333;
 }
 
 a {
     text-decoration: none;
-    color: #007BFF;
-}
-
-a:hover {
-    color: #0056b3;
+    color: inherit;
 }
 
 ul {
@@ -32,13 +21,12 @@ ul {
 }
 
 /* Header Section */
-header {
-    background: #fff;
-    color: #333;
-    padding: 15px 30px;
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem 2rem;
+    background-color: ghostwhite;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -46,111 +34,332 @@ header {
     height: 50px;
 }
 
-nav ul {
+.navigation ul {
     display: flex;
-    gap: 20px;
+    gap: 1.5rem;
 }
 
-nav a {
+.navigation ul li a {
+    color: #333;
     font-weight: bold;
-    font-size: 1rem;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(to bottom, rgba(0, 123, 255, 0.8), rgba(0, 181, 204, 0.8)), 
-                url('https://i.ibb.co/TWq81nF/shutterstock-605300333-FEAT.jpg') no-repeat center center / cover;
-    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 100px 20px;
+    padding: 3rem 2rem;
+    background: linear-gradient(to bottom, rgba(160, 196, 255, 0.8), rgba(202, 255, 191, 0.8)), 
+                url('https://i.ibb.co/3MS3mp5/Adult-capybara.webp') no-repeat center center / cover;
+    color: #333;
+    height: 100vh;
 }
 
 .hero-content {
     max-width: 600px;
-    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .hero h1 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    margin: 1rem 0;
+    font-size: 1.1rem;
 }
 
-.hero-button {
-    background: #007BFF;
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #000;
     color: #fff;
-    padding: 12px 24px;
     border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #555;
+}
+
+/* Moments Section */
+.moments {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.moments h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.moments p {
     font-size: 1rem;
-    transition: background 0.3s;
+    margin: 1rem 0;
+    color: #555;
 }
 
-.hero-button:hover {
-    background: #0056b3;
-}
-
-/* Gallery Section */
 .gallery {
-    padding: 50px 20px;
-    background: #fff;
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
-.gallery h2 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-}
-
-.gallery-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-}
-
-.gallery-grid img {
-    max-width: 300px;
+.gallery img {
     width: 100%;
+    height: auto;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer Section */
+/* Responsive Design */
+@media (min-width: 768px) {
+    .hero-content {
+        text-align: left;
+        margin-right: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Header Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #4CAF50;
+  color: #333;
+}
+
+header {
+  background: #4CAF50;
+  color: black;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header .menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+header .menu li {
+  display: inline;
+}
+
+header .menu li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+#intro {
+  text-align: center;
+  padding: 20px;
+  background: #eafbe7;
+}
+
+#intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+#intro p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.volunteer-section {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-aligns content */
+  text-align: center; /* Ensures text alignment */
+}
+
+.volunteer-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #4CAF50;
+}
+
+.volunteer-section p {
+  margin: 5px 0;
+}
+
+.volunteer-btn {
+  margin-top: 20px; /* Add space between text and button */
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.volunteer-btn:hover {
+  background: #45a049;
+}
+
 footer {
-    background: linear-gradient(135deg, #22577A, #38A3A5);
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-    margin-top: 50px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 10px;
+  background: #4CAF50;
+  color: white;
+  margin-top: 20px;
 }
 
-footer p {
-    font-size: 1rem;
+@media (max-width: 768px) {
+  header .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .volunteer-section {
+    margin: 10px;
+  }
+}
+
+/* Video Section Styling */
+.video-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(120deg, #f4f4f4, #e0f7fa); /* Light gradient background */
+}
+
+.video-section h2 {
+  font-size: 2.8rem;
+  color: #00796b; /* Deep teal for heading */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.video-section p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Fullscreen Videos for Explanation Session */
+.video-wrapper {
+  position: relative;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  margin: 0 auto; /* Center-aligns the video container */
+  border-radius: 10px;
+  overflow: hidden; /* Ensures the content fits inside the container */
+  max-width: 100%; /* Prevents overflow */
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* Remove border */
+}
+
+/* Footer Section Styling */
+.footer-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(120deg, #004d40, #00695c); /* Darker gradient */
+  color: white;
+}
+
+.footer-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.footer-content p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Wrap buttons on smaller screens */
+  gap: 15px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  color: #00796b;
+  border: 2px solid #00796b; /* Border to tie colors together */
+}
+
+.btn-primary:hover {
+  background-color: #e0f2f1; /* Subtle green for hover */
+  color: #004d40;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: #004d40;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
+  .video-section {
+    padding: 30px 15px;
+  }
 
-    .hero {
-        padding: 60px 15px;
-    }
+  .video-wrapper {
+    width: 100%;
+  }
 
-    .hero h1 {
-        font-size: 2.2rem;
-    }
+  .footer-section {
+    padding: 40px 15px;
+  }
 
-    .gallery-grid {
-        flex-direction: column;
-    }
+  .footer-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+  }
 }
