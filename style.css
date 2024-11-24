@@ -267,92 +267,34 @@ footer {
 }
 
 /* Fullscreen Videos for Explanation Session */
-
-
-.footer-content h2 {
-  font-size: 2.2rem;
-  margin.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* This maintains the 16:9 aspect ratio for the video */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    border-radius: 10px;
-    margin: 0 auto;
-    background: none;  /* Removes the black background */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px; /* Limits max width to 900px */
+  padding-bottom: 56.25%; /* This maintains the 16:9 aspect ratio for the video */
+  height: 0;
+  overflow: hidden;
+  margin: 0 auto;
+  background: none;  /* Removes the black background */
 }
 
 .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Ensures the iframe takes full width of the wrapper */
-    height: 100%; /* Ensures the iframe takes full height of the wrapper */
-    border: none;  /* Removes any border around the iframe */
-}-bottom: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensures the iframe takes full width of the wrapper */
+  height: 100%; /* Ensures the iframe takes full height of the wrapper */
+  border: none;  /* Removes any border around the iframe */
 }
 
-.footer-content p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
-}
-
-.footer-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; /* Wrap buttons on smaller screens */
-  gap: 15px;
-}
-
-.btn-primary,
-.btn-secondary {
-  padding: 12px 30px;
-  font-size: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-primary {
-  background-color: #ffffff;
-  color: #00796b;
-  border: 2px solid #00796b; /* Border to tie colors together */
-}
-
-.btn-primary:hover {
-  background-color: #e0f2f1; /* Subtle green for hover */
-  color: #004d40;
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: white;
-  border: 2px solid white;
-}
-
-.btn-secondary:hover {
-  background-color: white;
-  color: #004d40;
-}
-
-/* Responsive Design */
+/* Responsive Design for video section */
 @media (max-width: 768px) {
   .video-section {
     padding: 30px 15px;
   }
 
   .video-wrapper {
-    width: 100%;
-  }
-
-  .footer-section {
-    padding: 40px 15px;
-  }
-
-  .footer-buttons {
-    flex-direction: column; /* Stack buttons vertically */
+    max-width: 100%; /* Full width on smaller screens */
+    padding-bottom: 56.25%; /* Maintain aspect ratio */
   }
 }
