@@ -1,45 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your external CSS if applicable -->
-</head>
-<body>
 
-    <!-- Main content that will appear only in landscape mode -->
-    <div id="content" class="content">
-        <h1>Welcome to the Website</h1>
-        <p>This content is visible in landscape mode.</p>
-    </div>
-
-    <!-- Message to show when in portrait mode -->
-    <div id="portrait-message" class="landscape-message">
-        <h2>Please rotate your device to landscape mode to view the website.</h2>
-    </div>
-
-    <!-- Include the JavaScript to handle the orientation check -->
-    <script>
-        function checkOrientation() {
-            if (window.innerHeight > window.innerWidth) {
-                // If in portrait mode, show message and hide content
-                document.getElementById('content').style.display = 'none';
-                document.getElementById('portrait-message').style.display = 'block';
-            } else {
-                // If in landscape mode, show content and hide message
-                document.getElementById('content').style.display = 'block';
-                document.getElementById('portrait-message').style.display = 'none';
-            }
-        }
-
-        // Check orientation on load and on resize
-        window.addEventListener('load', checkOrientation);
-        window.addEventListener('resize', checkOrientation);
-    </script>
-
-</body>
-</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
