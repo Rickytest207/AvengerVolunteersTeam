@@ -240,6 +240,7 @@ footer {
     margin: 10px;
   }
 }
+
 /* Video Section Styling */
 .video-section {
   display: flex;
@@ -264,26 +265,41 @@ footer {
   margin-bottom: 30px;
 }
 
+/* Fullscreen Videos for Explanation Session */
+.volunteer-section .video-wrapper {
+    position: relative;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    margin: 0 auto; /* Center-aligns the video container */
+}
 .video-wrapper {
-  position: relative;
-  width: 90%;
-  max-width: 1200px;
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-  margin-top: 20px;
+
+    position: relative;
+
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 10px;
+    margin: 0 auto;
 }
 
 .video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
-  border: 3px solid #00796b; /* Border to match heading color */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
-
+.volunteer-section .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Spans the full width */
+    height: 100%; /* Spans the full height */
+    border: none; /* Remove border */
+}
 /* Footer Section Styling */
 .footer-section {
   text-align: center;
