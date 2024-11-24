@@ -241,15 +241,14 @@ footer {
     margin: 10px;
   }
 }
-
 /* Video Section Styling */
 .video-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
-  padding: 50px 20px;
+  padding: 20px;
   background: linear-gradient(120deg, #f4f4f4, #e0f7fa); /* Light gradient background */
 }
 
@@ -266,41 +265,64 @@ footer {
   margin-bottom: 30px;
 }
 
-/* Fullscreen Videos for Explanation Session */
+/* Video Wrapper Styling */
 .video-wrapper {
   position: relative;
   width: 100%;
-  max-width: 900px; /* Limits max width to 900px */
-  padding-bottom: 56.25%; /* This maintains the 16:9 aspect ratio for the video */
-  height: 0;
+  max-width: 100%;
+  padding-bottom: 56.25%; /* Keeps the 16:9 aspect ratio */
+  height: 125vh; /* Increase the video height to 125% of the viewport height */
   overflow: hidden;
   margin: 0 auto;
-  background: none;  /* Removes the black background */
+  background: none;
 }
 
+/* Video iframe */
 .video-wrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* Ensures the iframe takes full width of the wrapper */
-  height: 100%; /* Ensures the iframe takes full height of the wrapper */
-  border: none;  /* Removes any border around the iframe */
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
-/* Responsive Design for video section */
+/* Text at the bottom of the video */
+.video-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: #fff;
+}
+
+.video-text h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.video-text p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Media Query for Portrait Mode (Smaller Screens) */
 @media (max-width: 768px) {
-  .video-section {
-    padding: 30px 15px;
-  }
-
   .video-wrapper {
-    max-width: 100%; /* Full width on smaller screens */
-    padding-bottom: 56.25%; /* Maintain aspect ratio */
+    height: 110vh; /* Increase video height to 110% of the viewport height in portrait mode */
   }
-}
- 
 
-#feedback {
+  .video-text h2 {
+    font-size: 1.6rem; /* Smaller heading font size */
+  }
+
+  .video-text p {
+    font-size: 0.9rem; /* Smaller text size */
+  }
+}#feedback {
     padding: 40px 20px;
     background-color: #f7f7f7;
     text-align: center;
@@ -332,25 +354,52 @@ footer {
     margin-right: 20px;
 }
 
-.feedback-text {
-    text-align: left;
+./* Feedback Section Styling */
+.feedback-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  background-color: #f4f4f4;
+  margin-top: 30px;
 }
 
-.feedback-text h3 {
-    margin: 0 0 10px;
-    font-size: 22px;
-    color: #333;
+.feedback-section h2 {
+  font-size: 2.5rem;
+  color: #00796b;
+  margin-bottom: 15px;
 }
 
-.feedback-text p {
-    margin: 0;
-    font-size: 16px;
-    color: #666;
+.feedback-section p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+.feedback-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: Adds rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+  transition: transform 0.3s ease; /* Optional: Adds a zoom effect on hover */
+}
+
+.feedback-image img:hover {
+  transform: scale(1.05); /* Optional: Slight zoom effect on hover */
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .feedback-section h2 {
+    font-size: 2rem;
+  }
+
+  .feedback-section p {
+    font-size: 1rem;
+  }
+
+  .feedback-image img {
+    max-width: 80%; /* Resize the image on smaller screens */
+  }
 }
