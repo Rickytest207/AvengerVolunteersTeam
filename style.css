@@ -132,42 +132,15 @@ ul {
         font-size: 3rem;
     }
 }
-
-/* Volunteer Section */
-.volunteer-section {
-    background: white;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.volunteer-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #4CAF50;
-}
-
-.volunteer-section p {
-    margin: 5px 0;
-}
-
-.volunteer-btn {
-    margin-top: 20px;
 /* General video section container */
 .volunteer-section {
     background: white;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
+    margin: 20px 0;
+    padding: 0; /* Remove padding to let videos take full width */
     display: flex;
-    flex-direction: column;  /* Stack elements vertically */
-    align-items: center;  /* Center-aligns content */
-    text-align: center;  /* Ensures text alignment */
-    position: relative;  /* Prevents stacking issues */
+    flex-direction: column;
+    align-items: center; /* Center-align the video and text */
+    text-align: center;
 }
 
 /* Fullscreen Video Wrapper */
@@ -175,7 +148,7 @@ ul {
     position: relative;
     width: 100%;
     height: 0;
-    padding-bottom: 56.25%;  /* 16:9 aspect ratio (height / width * 100) */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
     margin: 0 auto;
     overflow: hidden;
     background: none;
@@ -193,56 +166,47 @@ ul {
     border: none;
 }
 
-/* Mobile responsive layout */
+/* For mobile devices */
 @media (max-width: 768px) {
     .volunteer-section {
-        padding: 10px;
+        margin: 0 10px; /* Space between sections */
     }
 
-    /* Make sure the videos fit within the container and don't overflow */
+    /* Ensures the video fits the screen */
     .volunteer-section .video-wrapper {
-        padding-bottom: 56.25%; /* Maintain 16:9 ratio */
+        padding-bottom: 56.25%; /* Keep the 16:9 aspect ratio */
         height: auto;
     }
 }
 
-/* For large screens (PCs) */
+/* For larger screens (desktops or TVs) */
 @media (min-width: 1024px) {
     .volunteer-section {
-        margin: 20px auto; /* Add margin for spacing */
-        max-width: 80%;  /* Limit maximum width for larger screens */
+        /* Remove extra margin for full-screen effect */
+        margin: 0;
+        height: 100vh; /* Take up the entire viewport height */
     }
 
+    /* Fullscreen video mode */
     .volunteer-section .video-wrapper {
-        height: 100vh; /* Full viewport height on larger screens */
+        height: 100vh; /* Full viewport height */
         padding-bottom: 56.25%; /* Keep 16:9 aspect ratio */
+        margin: 0;
     }
-}    padding: 10px 20px;
-    background: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+
+    /* Ensure video iframe fits within the container */
+    .video-wrapper iframe {
+        width: 100%;
+        height: 100%;
+    }
 }
 
-.volunteer-btn:hover {
-    background: #45a049;
+/* Ensures the video does not overflow or stack */
+.volunteer-section .video-wrapper {
+    display: block;
+    width: 100%;
+    height: auto;
 }
-
-/* Video Section Styling */
-.video-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(120deg, #f4f4f4, #e0f7fa);
-}
-
-.video-section h2 {
-    font-size: 2.8rem;
-
 /* Footer Section Styling */
 .footer-section {
   text-align: center;
