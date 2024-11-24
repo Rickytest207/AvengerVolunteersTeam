@@ -135,95 +135,93 @@ ul {
 
 /* Header Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #4CAF50;
-    color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #4CAF50;
+  color: #333;
 }
 
 header {
-    background: #4CAF50;
-    color: black;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background: #4CAF50;
+  color: black;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 header .menu {
-    list-style: none;
-    display: flex;
-    gap: 15px;
+  list-style: none;
+  display: flex;
+  gap: 15px;
 }
 
 header .menu li {
-    display: inline;
+  display: inline;
 }
 
 header .menu li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 #intro {
-    text-align: center;
-    padding: 20px;
-    background: #eafbe7;
+  text-align: center;
+  padding: 20px;
+  background: #eafbe7;
 }
 
 #intro h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 #intro p {
-    font-size: 1.2rem;
-    color: #555;
+  font-size: 1.2rem;
+  color: #555;
 }
 
 .volunteer-section {
-    background: white;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center-aligns content */
-    text-align: center; /* Ensures text alignment */
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-aligns content */
+  text-align: center; /* Ensures text alignment */
 }
 
 .volunteer-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: #4CAF50;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #4CAF50;
 }
 
 .volunteer-section p {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .volunteer-btn {
-    margin-top: 20px; /* Add space between text and button */
-    padding: 10px 20px;
-    background: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  margin-top: 20px; /* Add space between text and button */
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .volunteer-btn:hover {
-    background: #45a049;
+  background: #45a049;
 }
-
-/* Feedback Section */
 #feedback {
     padding: 40px 20px;
     background-color: #f7f7f7;
@@ -232,9 +230,8 @@ header .menu li a {
 
 #feedback h2 {
     margin-bottom: 30px;
-    font-size: 2rem;
-    color: #00796b;
-    text-transform: uppercase;
+    font-size: 28px;
+    color: #333;
 }
 
 .feedback-card {
@@ -263,14 +260,14 @@ header .menu li a {
 
 .feedback-text h3 {
     margin: 0 0 10px;
-    font-size: 1.5rem;
+    font-size: 22px;
     color: #333;
 }
 
 .feedback-text p {
     margin: 0;
-    font-size: 1rem;
-    color: #555;
+    font-size: 16px;
+    color: #666;
 }
 
 footer {
@@ -278,73 +275,82 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    margin-top: 20px;
+}
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #4CAF50;
+  color: white;
+  margin-top: 20px;
 }
 
 @media (max-width: 768px) {
-    header .menu {
-        flex-direction: column;
-        gap: 10px;
-    }
+  header .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .volunteer-section {
-        margin: 10px;
-    }
+  .volunteer-section {
+    margin: 10px;
+  }
 }
 
 /* Video Section Styling */
 .video-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(120deg, #f4f4f4, #e0f7fa); /* Light gradient background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(120deg, #f4f4f4, #e0f7fa); /* Light gradient background */
 }
 
 .video-section h2 {
-    font-size: 2.8rem;
-    color: #00796b; /* Deep teal for heading */
-    margin-bottom: 20px;
-    text-transform: uppercase;
+  font-size: 2.8rem;
+  color: #00796b; /* Deep teal for heading */
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .video-section p {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 30px;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
 }
 
 /* Fullscreen Videos for Explanation Session */
 .video-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 900px; /* Limits max width to 900px */
-    padding-bottom: 56.25%; /* This maintains the 16:9 aspect ratio for the video */
-    height: 0;
-    overflow: hidden;
-    margin: 0 auto;
-    background: none;  /* Removes the black background */
+  position: relative;
+  width: 100%;
+  max-width: 900px; /* Limits max width to 900px */
+  padding-bottom: 56.25%; /* This maintains the 16:9 aspect ratio for the video */
+  height: 0;
+  overflow: hidden;
+  margin: 0 auto;
+  background: none;  /* Removes the black background */
 }
 
 .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Ensures the iframe takes full width of the wrapper */
-    height: 100%; /* Ensures the iframe takes full height of the wrapper */
-    border: none;  /* Removes any border around the iframe */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensures the iframe takes full width of the wrapper */
+  height: 100%; /* Ensures the iframe takes full height of the wrapper */
+  border: none;  /* Removes any border around the iframe */
 }
 
 /* Responsive Design for video section */
 @media (max-width: 768px) {
-    .video-section {
-        padding: 30px 15px;
-    }
+  .video-section {
+    padding: 30px 15px;
+  }
 
-    .video-wrapper {
-        max-width: 100%; /* Full width on smaller screens */
-        padding-bottom: 56.25%; /* Maintain aspect ratio */
-    }
+  .video-wrapper {
+    max-width: 100%; /* Full width on smaller screens */
+    padding-bottom: 56.25%; /* Maintain aspect ratio */
+  }
 }
+ 
+
+Now this is the CSS, please give a design for the feed back
