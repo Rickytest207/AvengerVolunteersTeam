@@ -157,7 +157,67 @@ ul {
 
 .volunteer-btn {
     margin-top: 20px;
-    padding: 10px 20px;
+/* General video section container */
+.volunteer-section {
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;  /* Stack elements vertically */
+    align-items: center;  /* Center-aligns content */
+    text-align: center;  /* Ensures text alignment */
+    position: relative;  /* Prevents stacking issues */
+}
+
+/* Fullscreen Video Wrapper */
+.volunteer-section .video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;  /* 16:9 aspect ratio (height / width * 100) */
+    margin: 0 auto;
+    overflow: hidden;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* Video within wrapper */
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Mobile responsive layout */
+@media (max-width: 768px) {
+    .volunteer-section {
+        padding: 10px;
+    }
+
+    /* Make sure the videos fit within the container and don't overflow */
+    .volunteer-section .video-wrapper {
+        padding-bottom: 56.25%; /* Maintain 16:9 ratio */
+        height: auto;
+    }
+}
+
+/* For large screens (PCs) */
+@media (min-width: 1024px) {
+    .volunteer-section {
+        margin: 20px auto; /* Add margin for spacing */
+        max-width: 80%;  /* Limit maximum width for larger screens */
+    }
+
+    .volunteer-section .video-wrapper {
+        height: 100vh; /* Full viewport height on larger screens */
+        padding-bottom: 56.25%; /* Keep 16:9 aspect ratio */
+    }
+}    padding: 10px 20px;
     background: #4CAF50;
     color: white;
     border: none;
@@ -182,55 +242,7 @@ ul {
 
 .video-section h2 {
     font-size: 2.8rem;
-    color: #00796b;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
 
-.video-section p {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-/* Fullscreen Videos for Explanation Session */
-/* Fullscreen Videos for Explanation Session */
-.volunteer-section .video-wrapper {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio (height / width * 100) */
-    margin: 0 auto;
-    overflow: hidden;
-    background: none; /* Remove any background shader */
-    border-radius: 0; /* Remove border-radius if not needed */
-    box-shadow: none; /* No shadow */
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/* For smaller screens like mobile devices */
-@media (max-width: 768px) {
-    .volunteer-section .video-wrapper {
-        padding-bottom: 56.25%; /* Ensure 16:9 ratio */
-        height: auto; /* Allow the video to scale properly */
-    }
-}
-
-/* For large screens (PCs) */
-@media (min-width: 1024px) {
-    .volunteer-section .video-wrapper {
-        height: 100vh; /* Full viewport height on larger screens */
-        padding-bottom: 56.25%; /* Keep 16:9 aspect ratio */
-    }
-}
 /* Footer Section Styling */
 .footer-section {
   text-align: center;
