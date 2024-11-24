@@ -132,153 +132,82 @@ ul {
         font-size: 3rem;
     }
 }
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #4CAF50;
-  color: #333;
-}
 
-header {
-  background: #4CAF50;
-  color: black;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-header .menu {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-
-header .menu li {
-  display: inline;
-}
-
-header .menu li a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-
-#intro {
-  text-align: center;
-  padding: 20px;
-  background: #eafbe7;
-}
-
-#intro h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-#intro p {
-  font-size: 1.2rem;
-  color: #555;
-}
-
+/* Volunteer Section */
 .volunteer-section {
-  background: white;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center-aligns content */
-  text-align: center; /* Ensures text alignment */
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .volunteer-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  color: #4CAF50;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #4CAF50;
 }
 
 .volunteer-section p {
-  margin: 5px 0;
+    margin: 5px 0;
 }
 
 .volunteer-btn {
-  margin-top: 20px; /* Add space between text and button */
-  padding: 10px 20px;
-  background: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .volunteer-btn:hover {
-  background: #45a049;
-}
-
-footer {
-  text-align: center;
-  padding: 10px;
-  background: #4CAF50;
-  color: white;
-  margin-top: 20px;
-}
-
-@media (max-width: 768px) {
-  header .menu {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .volunteer-section {
-    margin: 10px;
-  }
+    background: #45a049;
 }
 
 /* Video Section Styling */
 .video-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 50px 20px;
-  background: linear-gradient(120deg, #f4f4f4, #e0f7fa); /* Light gradient background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(120deg, #f4f4f4, #e0f7fa);
 }
 
 .video-section h2 {
-  font-size: 2.8rem;
-  color: #00796b; /* Deep teal for heading */
-  margin-bottom: 20px;
-  text-transform: uppercase;
+    font-size: 2.8rem;
+    color: #00796b;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .video-section p {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 30px;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
 }
 
 /* Fullscreen Videos for Explanation Session */
 .volunteer-section .video-wrapper {
     position: relative;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    margin: 0 auto; /* Center-aligns the video container */
+    width: 100%;
+    height: 56.25vw; /* Keep the video aspect ratio of 16:9 */
+    margin: 0 auto;
+    overflow: hidden;
+    background: #000;
+    border-radius: 10px;
 }
+
 .video-wrapper {
-
     position: relative;
-
     padding-bottom: 56.25%;
     height: 0;
-    overflow: hidden;
     max-width: 100%;
     background: #000;
     border-radius: 10px;
@@ -291,20 +220,14 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
+    border: none;
 }
-.volunteer-section .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Spans the full width */
-    height: 100%; /* Spans the full height */
-    border: none; /* Remove border */
-}
+
 /* Footer Section Styling */
 .footer-section {
   text-align: center;
   padding: 50px 20px;
-  background: linear-gradient(120deg, #004d40, #00695c); /* Darker gradient */
+  background: linear-gradient(120deg, #004d40, #00695c);
   color: white;
 }
 
@@ -321,7 +244,7 @@ footer {
 .footer-buttons {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Wrap buttons on smaller screens */
+  flex-wrap: wrap;
   gap: 15px;
 }
 
@@ -340,11 +263,11 @@ footer {
 .btn-primary {
   background-color: #ffffff;
   color: #00796b;
-  border: 2px solid #00796b; /* Border to tie colors together */
+  border: 2px solid #00796b;
 }
 
 .btn-primary:hover {
-  background-color: #e0f2f1; /* Subtle green for hover */
+  background-color: #e0f2f1;
   color: #004d40;
 }
 
@@ -367,6 +290,7 @@ footer {
 
   .video-wrapper {
     width: 100%;
+    height: 56.25vw; /* 16:9 ratio */
   }
 
   .footer-section {
@@ -374,6 +298,6 @@ footer {
   }
 
   .footer-buttons {
-    flex-direction: column; /* Stack buttons vertically */
+    flex-direction: column;
   }
-}
+    }
